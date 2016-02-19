@@ -3,15 +3,80 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico">
     <title>EVA & MICELE</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <script>
+        Parse.initialize("dr03VQl7j1K9OtXdXzbDsq0YLmtEAwxP2Ora4XUa", "WHuhCUUP5gFTbUxdSyv1itieaTDF7OSJBrF9ZY8w");
+
+        function sent(form) {
+
+            var Guest = Parse.Object.extend("Guest");
+            var guest = new Guest();
+            guest.save({
+                names: form.names.value,
+                comesToCeremony: form.comesToCeremony.checked,
+                comesToParty: form.comesToParty.checked,
+                food: form.food.value
+            }).then(function(object) {
+                alert('Vielen Dank. Wir freuen uns.');
+                form.reset();
+            });
+        }
+    </script>
+
 </head>
 <body style="text-align:center;">
 <div style="position: absolute; top: 100px; width: 100%; z-index:-1;"><img src="background.svg" style="width: 100%"></div>
-<div>
-    <img style="position: absolute; bottom: 50px; width: 200px; margin-left: -100px;" src="date.svg">
+<div style="
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    ">
+    <img style="
+    width: 40%;
+    max-width: 175px;
+" src="date.svg">
 </div>
 
+<table style="
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: green; */
+    height: 100%;
+">
+    <tbody><tr>
+        <td style="
+">
+            <form action="#" onsubmit="return sent(this);" style="
+    width: 320px;
+    margin: auto;
+    display: block;
+">
+                <input placeholder="Name/n" name="names"><br>
+                <p>
+                    <input type="checkbox" class="filled-in" id="comesToCeremony" name="comesToCeremony" />
+                    <label for="comesToCeremony">Ich/wir komme/n zur Trauung.</label>
+                </p>
+                <p>
+                    <input type="checkbox" class="filled-in" id="comesToParty" name="comesToParty" />
+                    <label for="comesToParty">Ich/wir komme/n zur Party.</label>
+                </p>
+                <input placeholder="Vegetarier/Vegan/Laktose..." name="food"><br>
+                <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">Absenden
+                </button>
+            </form>
+        </td>
+    </tr>
+    </tbody></table>
 </body>
 </html>

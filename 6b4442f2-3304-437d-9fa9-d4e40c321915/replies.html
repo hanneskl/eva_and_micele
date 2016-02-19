@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <title>EVA & MICELE - Antworten</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <style> td {
+        border-bottom: 1px solid silver;
+    }
+    </style>
+    <script>
+        Parse.initialize("dr03VQl7j1K9OtXdXzbDsq0YLmtEAwxP2Ora4XUa", "WHuhCUUP5gFTbUxdSyv1itieaTDF7OSJBrF9ZY8w");
+
+        var Guest = Parse.Object.extend("Guest");
+        var query = new Parse.Query(Guest);
+        query.limit(1000);
+        query.find({
+            success: function(results) {
+
+                var table  = "<table><tr><th>Name</th><th>Futter</th><th>Party</th><th>Ceremony</th></tr>";
+                for (var i = 0; i < results.length; i++) {
+                    var object = results[i];
+                    table = table + "<tr><td>" + object.get("names") + "</td><td>" + object.get("food") + "</td><td>" + object.get("comesToCeremony") + "</td><td>" + object.get("comesToParty") + "</td></tr>";
+                }
+                table = table + "</table>";
+                document.body.innerHTML = table;
+            },
+            error: function(error) {
+                alert("Error: " + error.code + " " + error.message);
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
