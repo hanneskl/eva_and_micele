@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  background: #F7F6F2;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  width: 100%;
+  z-index:-1;
+  height: 15%;
+  max-height: 180px;
+  padding-top: 30px;
+  background: #fff;
+}
+
+.logo:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -39%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url("logo_new.svg") no-repeat center;
+  background-size: auto 100%;
+}
+
+.date {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 50px;
+  background: url("date.svg") no-repeat center bottom;
+  background-size: 180px auto;
+}
+
+.floating_block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.floating_block .wrapper,
+.floating_block form  {
+  width: 320px;
+  margin: auto;
+  display: block;
+}
+
+nav {
+  background-color: #fff;
+  box-shadow: none;
+}
+
+nav a {
+  color: #9e9e9e;
+  font-size: 20px;
+  margin: 0 10px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
