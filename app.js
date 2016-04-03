@@ -5,7 +5,8 @@ function sent(form) {
     var Guest = Parse.Object.extend("Guest");
     var guest = new Guest();
     guest.save({
-        names: form.names.value,
+        name: form.name.value,
+        namePlusOne: form.namePlusOne.value,
         comesToCeremony: form.comesToCeremony.checked,
         comesToParty: form.comesToParty.checked,
         doesNotCome: form.doesNotCome.checked,

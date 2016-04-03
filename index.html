@@ -19,7 +19,7 @@
 <body>
 <div class="navbar-fixed">
     <nav>
-        <a href="trauung.html">Standesamtliche Trauung</a>
+        <a href="index.html">Anmelden</a><a href="trauung.html">Trauung</a>
         <a href="party.html">Party</a>
         <a href="anfahrt.html">Adressen & Anfahrt</a>
         <a href="hotels.html">Hotels</a>
@@ -27,34 +27,27 @@
         <a href="faq.html">Fragen & Geschenke</a>
     </nav>
 </div>
+<div class="logo"><img src="logo_new.svg"></div>
 
-<div class="logo"></div>
-<table class="floating_block">
-    <tbody>
-    <tr>
-        <td>
-            <form action="#" onsubmit="event.preventDefault(); sent(this);">
-                <input placeholder="Name/n" name="names"><br>
-                <p>
-                    <input type="checkbox" class="filled-in" id="comesToParty" name="comesToParty" />
-                    <label for="comesToParty">Ich/wir kommen zur Party um 18 Uhr.</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="comesToCeremony" name="comesToCeremony" />
-                    <label for="comesToCeremony">Ich/wir kommen auch schon zur standesamtlichen Trauung um 12 Uhr.</label>
-                </p>
-                <input placeholder="Vegetarier/Vegan..." name="food">
-                <p>
-                    <input type="checkbox" class="filled-in" id="doesNotCome" name="doesNotCome" />
-                    <label for="doesNotCome">Ich/wir können leider gar nicht an der Feier teilnehmen.</label>
-                </p>
-                <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">Absenden
-                </button>
-            </form>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<form action="#" onsubmit="event.preventDefault(); sent(this);">
+    <input placeholder="Vorname Nachname" name="name"><br>
+    <input placeholder="Vorname Nachname Begleitung" name="namePlusOne"><br>
+    <p>
+        <input type="checkbox" class="filled-in" id="comesToParty" name="comesToParty" />
+        <label for="comesToParty">Ich/wir kommen zur Party um 18 Uhr.</label>
+    </p>
+    <p>
+        <input type="checkbox" class="filled-in" id="comesToCeremony" name="comesToCeremony" />
+        <label for="comesToCeremony">Ich/wir kommen auch schon zur standesamtlichen Trauung um 12 Uhr.</label>
+    </p>
+    <input placeholder="Vegetarier/Vegan..." name="food">
+    <p>
+        <input type="checkbox" class="filled-in" id="doesNotCome" name="doesNotCome" />
+        <label for="doesNotCome">Ich/wir können leider gar nicht an der Feier teilnehmen.</label>
+    </p>
+    <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">Absenden
+    </button>
+</form>
 
 <div class="date"></div>
 </body>

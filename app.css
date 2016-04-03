@@ -5,25 +5,12 @@ body {
 }
 
 .logo {
-  position: absolute;
   width: 100%;
   z-index:-1;
-  height: 15%;
-  max-height: 180px;
-  padding-top: 30px;
-  background: #fff;
-}
-
-.logo:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -39%;
-  left: 0%;
-  height: 100%;
-  width: 100%;
-  background: url("logo_new.svg") no-repeat center;
-  background-size: auto 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background: url("background.png") repeat-x top;
 }
 
 .date {
@@ -35,34 +22,36 @@ body {
   background-size: 180px auto;
 }
 
-.floating_block {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.floating_block .wrapper,
-.floating_block form  {
+form  {
   width: 320px;
   margin: auto;
   display: block;
 }
 
 
-.floating_block .content {
-  padding: 50px;
+.content {
+  padding: 10px 50px;
   margin: auto;
   display: block;
+  text-align: left;
+  max-width: 768px;
 }
 
-nav {
-  background-color: #fff;
+.navbar-fixed {
+  overflow: hidden;
+  background: green;
+  display: block;
+  height: auto;
+  position: inherit;
+}
+
+.navbar-fixed nav {
+  background-color: white;
   box-shadow: none;
-  line-height: 40px;
+  overflow: hidden;
+  display: block;
+  height: auto;
+  position: inherit;
 }
 
 nav a {
@@ -71,6 +60,7 @@ nav a {
   margin: 0 10px;
   display: inline-block;
   font-weight: 300;
+  height: 40px;
 }
 
 @media screen and (max-width: 374px) {
