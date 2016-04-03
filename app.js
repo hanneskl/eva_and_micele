@@ -8,9 +8,15 @@ function sent(form) {
         names: form.names.value,
         comesToCeremony: form.comesToCeremony.checked,
         comesToParty: form.comesToParty.checked,
+        doesNotCome: form.doesNotCome.checked,
         food: form.food.value
     }).then(function(object) {
-        alert('Vielen Dank. Wir freuen uns.');
-        form.reset();
+        if (form.doesNotCome.checked) {
+            window.location = "schade.html";
+        } else {
+            window.location = "danke.html";
+        }
     });
+
+    return true;
 }
