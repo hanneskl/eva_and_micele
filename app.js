@@ -4,9 +4,15 @@ function sent(form) {
 
     var Guest = Parse.Object.extend("Guest");
     var guest = new Guest();
+
+    var namePlusOne = "";
+    $(".morePersons").each(function() {
+        namePlusOne += $(this)[0].value + ", ";
+    });
+
     guest.save({
         name: form.name.value,
-        namePlusOne: form.namePlusOne.value,
+        namePlusOne: namePlusOne,
         comesToCeremony: form.comesToCeremony.checked,
         comesToParty: form.comesToParty.checked,
         doesNotCome: form.doesNotCome.checked,
@@ -20,4 +26,17 @@ function sent(form) {
     });
 
     return true;
+}
+
+var numberOfMoreGuests = 0;
+
+function addPerson(person) {
+
+    $(person).before('<input class="morePersons" placeholder="Vorname Nachname" name="name' + numberOfMoreGuests + '" style="width: 80%;">');
+    numberOfMoreGuests++;
+
+    if (numberOfMoreGuests > 5) {
+        $('#addPerson').addClass("disabled");
+        $('#addPerson')[0].setAttribute("onclick", "");
+    }
 }

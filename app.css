@@ -183,6 +183,13 @@ h1 {
   font-size: 20px;
   color: #AF8860;
 }
+h2 {
+  font-size: 18px;
+  color: darkgrey;
+}
+h3, h4 {
+  font-size: 16px;
+}
 
 p {
   color: #2C4140;
