@@ -4,6 +4,10 @@ body {
   text-align: center;
 }
 
+.confetti {
+  background: url("images/confetti.gif");
+}
+
 .logo {
   width: 100%;
   z-index:-1;
