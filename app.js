@@ -24,6 +24,16 @@ function sent(form) {
         return
     }
 
+    if (form.name.value == "" || form.email.value == "") {
+        alert("Bitte gib Deine E-Mail und Deinen Namen an.");
+        return;
+    }
+
+    if (form.comesToCeremony.checked == false && form.comesToParty.checked == false && form.doesNotCome.checked == false) {
+        alert("Bitte sage uns, ob Du kommst oder nicht.");
+        return
+    }
+
     guest.save({
         name: form.name.value,
         email: form.email.value,

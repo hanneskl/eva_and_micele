@@ -28,9 +28,7 @@
                         "<table><tr><th>Name</th><th>Name +1</th><th>Futter</th><th>Party</th><th>Ceremony</th><th>Not coming</th></tr>";
                 for (var i = 0; i < results.length; i++) {
                     var object = results[i];
-                    table = table + "<tr><td>" + object.get("name") + "<br>" + object.get("email") + "</td><td>" +
-                            object.get("namePlusOne") + "<br>" + object.get("emailPlusOne") +
-                            "</td><td>" + object.get("food") + "</td><td>" + object.get("comesToCeremony") + "</td><td>" + object.get("comesToParty") + "</td><td>" + object.get("doesNotCome") + "</td></tr>";
+                    table = table + "<tr><td>" + object.get("name") + "</td><td>" + object.get("namePlusOne") + "</td><td>" + object.get("food") + "</td><td>" + object.get("comesToParty") + "</td><td>" + object.get("comesToCeremony") + "</td><td>" + object.get("doesNotCome") + "</td></tr>";
                 }
                 table = table + "</table>";
                 document.body.innerHTML = table;
