@@ -17,6 +17,8 @@ body {
   background: url("background.png") repeat-x top;
 }
 
+.text-center { text-align: center; }
+
 .main-text {
   font-size: 110%;
 }
@@ -57,7 +59,7 @@ hr.beautiful-hr {
   background-image: -moz-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2);
   background-image: -ms-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2);
   background-image: -o-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2); 
-  margin: 1rem 0;
+  margin: 2rem 0 2.5rem;
 }
 
 .date {
@@ -104,6 +106,11 @@ img[align='right'] {
   display: block;
   text-align: left;
   max-width: 768px;
+}
+
+.buffer {
+  background-color: white;
+  height: 2rem;
 }
 
 .navbar nav {
