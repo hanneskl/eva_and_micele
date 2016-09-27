@@ -41,7 +41,7 @@ body {
 
 .list-inline li {
   display: inline-block;
-  padding: 2px 1rem;
+  padding: 2px .6rem;
 }
 
 .img-collage {
