@@ -17,6 +17,49 @@ body {
   background: url("background.png") repeat-x top;
 }
 
+.main-text {
+  font-size: 110%;
+}
+
+.collage-figure {
+  margin: 0 0 2em;
+}
+
+.collage-figure figcaption {
+  font-size: 90%;
+}
+
+.collage-figure figcaption,
+.collage-figure figcaption p {
+  color: #888;
+}
+
+.list-inline {
+  width: 100%;
+  text-align: center;
+}
+
+.list-inline li {
+  display: inline-block;
+  padding: 2px 1rem;
+}
+
+.img-collage {
+  width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+hr.beautiful-hr {
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2);
+  background-image: -moz-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2);
+  background-image: -ms-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2);
+  background-image: -o-linear-gradient(left, #F7F6F2, #8c8b8b, #F7F6F2); 
+  margin: 1rem 0;
+}
+
 .date {
   position: fixed;
   bottom: 20px;
